@@ -1,5 +1,17 @@
 import React from 'react';
 
-const Home = () => <h1>Hello World!</h1>;
+export default class Home extends React.Component {
 
-export default Home;
+    constructor(props) {
+        super(props);
+        this.state = {
+            message: props.message || 'Hello World!'
+        };
+    }
+
+    render() {
+        return (
+            <h1>{ this.state.message }</h1>
+        );
+    }
+}
